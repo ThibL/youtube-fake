@@ -4,6 +4,7 @@ import { SearchAppBar } from "./Layout/SimpleAppBar/SimpleAppBar";
 import { VideosList } from "./VideosList/VideosList";
 import { Trending } from "./Video/Trending";
 import { useStyles } from "./App.styles";
+import { GoogleLogin } from "./Login/GoogleLogin";
 
 export const App = () => {
   const [videos, setVideos] = useState([]);
@@ -23,9 +24,7 @@ export const App = () => {
           q: query,
         },
       });
-      console.log(response);
       setVideos(response.data.items);
-      console.log(videos);
     }
   };
 
@@ -38,7 +37,6 @@ export const App = () => {
         },
       })
       .then((response) => {
-        console.log(response);
         setTrending(response.data.items);
       });
   }, []);
@@ -52,6 +50,7 @@ export const App = () => {
           term={term}
         />
       </div>
+      <GoogleLogin />
       <div>
         <VideosList videos={videos} videoKey={Math.random()} />
       </div>

@@ -7,9 +7,11 @@ export const useStyles = makeStyles(() =>
       flexDirection: "row",
       flexWrap: "wrap",
       justifyContent: "center",
+      alignItems: "flex-start",
 
-      "&::last-child": {
-        justifySelf: "start",
+      "&::after": {
+        content: "",
+        flex: "auto",
       },
     },
   })

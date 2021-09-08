@@ -6,6 +6,7 @@ export const Trending = ({ video, videoKey }) => {
   return (
     <div key={videoKey} className={classes.trending}>
       <iframe
+        frameBorder="0"
         className={classes.iframe}
         src={`https://www.youtube.com/embed/${video.id}`}
         allowFullScreen

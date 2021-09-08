@@ -8,6 +8,7 @@ import { alpha, makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import { useStyles } from "../../VideosList/VideosList.styles";
+import { GoogleLogin } from "../../Login/GoogleLogin";
 
 export const SearchAppBar = ({ handleSubmit, handleChange, term }) => {
   const classes = useStyles();
@@ -24,6 +25,7 @@ export const SearchAppBar = ({ handleSubmit, handleChange, term }) => {
           <Typography className={classes.title} variant="h6" noWrap>
             Youtube Clone
           </Typography>
+
           <form onSubmit={handleFormSubmit}>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
